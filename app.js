@@ -30,8 +30,8 @@ new Vue({
       this.mAttack = Math.floor(Math.random() * 10) + 1;
       this.mWidth -= this.pAttack;
       this.pWidth -= this.mAttack;
-      this.array.push('PLAYER HITS MONSTER FOR ' + this.pAttack);
-      this.array.push('MONSTER HITS PLAYER FOR ' + this.mAttack);
+      this.array.unshift('MONSTER HITS PLAYER FOR ' + this.mAttack);
+      this.array.unshift('PLAYER HITS MONSTER FOR ' + this.pAttack);
       if(this.pWidth <= 0){
         final = confirm("You loose, start over?");
       }else if(this.mWidth <= 0) {
@@ -49,8 +49,8 @@ new Vue({
       this.mAttack = Math.floor(Math.random() * 16) + 5;
       this.mWidth -= this.pAttack;
       this.pWidth -= this.mAttack;
-      this.array.push('PLAYER HITS MONSTER FOR ' + this.pAttack);
-      this.array.push('MONSTER HITS PLAYER FOR ' + this.mAttack);
+      this.array.unshift('MONSTER HITS PLAYER FOR ' + this.mAttack);
+      this.array.unshift('PLAYER HITS MONSTER FOR ' + this.pAttack);
       if(this.pWidth <= 0){
         final = confirm("You loose, start over?");  
       }else if(this.mWidth <= 0) {
@@ -74,8 +74,8 @@ new Vue({
         }
       }
       this.pWidth -= this.mAttack;
-      this.array.push('PLAYER HEALS FOR ' + this.heals);
-      this.array.push('MONSTER HITS PLAYER FOR ' + this.mAttack);
+      this.array.unshift('MONSTER HITS PLAYER FOR ' + this.mAttack);
+      this.array.unshift('PLAYER HEALS FOR ' + this.heals);
     },
     checkClass: function(val) {
       return val % 2 === 0;
