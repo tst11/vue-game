@@ -1,3 +1,3 @@
-#Vue.js Game
+# Vue.js Game
 
 Simple vue.js game.
